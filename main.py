@@ -97,6 +97,44 @@ class studyEvent:
         """
         self.comment.append([commentName, commentContent])
 
+class sTodo:
+    """
+    <Todo status>
+    * None (literally mean none, blank)
+    * Done
+    * Almost
+    * Missed
+    """
+    def __init__(self, todoName:str, todoSubjectName:str, todoStatus:str="None", todoDate:sTime=sTime(now=True)):
+        self.todoName = todoName
+        self.todoSubjectName = todoSubjectName
+        self.todoStatus = todoStatus
+        self.todoDate = todoDate
+
+    def changeName(self, todoName:str):
+        self.todoName = todoName
+
+    def changeSubjectName(self, todoSubjectName:str):
+        self.todoSubjectName = todoSubjectName
+
+    def changeStatus(self, todoStatus:str):
+        self.todoStatus = todoStatus
+
+    def changeDate(self, todoDate:sTime):
+        self.todoDate = todoDate
+
+class sSubject:
+    def __init__(self, subjectName:str, subjectColor:str):
+        self.subjectName = subjectName
+        self.subjectColor = subjectColor
+        # self.totalTime = sTime()
+
+    def changeName(self, newName:str):
+        self.subjectName = newName
+
+    def changeColor(self, newColor:str):
+        self.subjectColor = newColor
+
 def main():
     # test (sTime operating)
     a = sTime(data=(0,1,2,3,4,5))
