@@ -97,6 +97,14 @@ class studyEvent:
         """
         self.comment.append([commentName, commentContent])
 
+class dayStudyEvent:
+    def __init__(self):
+        self.studyEventList = []
+        self.dayStudyingTime = sTime()
+    
+    def addStudyEvent(self, studyEvent):
+        pass
+
 class sTodo:
     """
     <Todo status>
